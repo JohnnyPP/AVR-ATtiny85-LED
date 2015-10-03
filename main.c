@@ -2,7 +2,7 @@
  * main.c
  *
  *  Created on: Oct 3, 2015
- *      Author: Kolan
+ *      Author: JohnnyP
  */
 
 #define F_CPU 1000000UL
