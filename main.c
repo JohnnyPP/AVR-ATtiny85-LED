@@ -12,13 +12,11 @@
 
 int main(void)
 {
-	DDRB |= 1 << PINB3; //AVR port B pin 3 set to output
+	DDRB |= 1 << PINB3; 		// AVR ATtiny 85 port B pin 3 set to output
 
 	while(1)
 	{
-		PORTB |= 1 << PINB3;
-		_delay_ms(100);
-		PORTB &= ~(1 << PINB3);
+		PORTB ^= 1 << PINB3;	// Toggling pin 3 by using XOR operation
 		_delay_ms(100);
 	}
 	return 0;
