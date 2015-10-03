@@ -12,13 +12,13 @@
 
 int main(void)
 {
-	DDRB = 0x08;
+	DDRB |= 1 << PINB3; //AVR port B pin 3 set to output
 
 	while(1)
 	{
-		PORTB = 0x00;
+		PORTB |= 1 << PINB3;
 		_delay_ms(100);
-		PORTB = 0x08;
+		PORTB &= ~(1 << PINB3);
 		_delay_ms(100);
 	}
 	return 0;
