@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	DDRB |= 1 << PINB3; 		// AVR ATtiny 85 port B pin 3 set to output
+	DDRB |= 1 << PINB3; 		// AVR ATtiny85 port B pin 3 set to output
 
 	while(1)
 	{
